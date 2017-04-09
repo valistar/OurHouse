@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Providers;
+namespace OurHouse\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use OurHouse\Models\Maintenance\RecurringTask;
+use OurHouse\Models\Observers\RecurringTaskObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        RecurringTask::observe(RecurringTaskObserver::class);
     }
 
     /**

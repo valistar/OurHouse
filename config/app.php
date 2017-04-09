@@ -171,11 +171,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        OurHouse\Providers\AppServiceProvider::class,
+        OurHouse\Providers\AuthServiceProvider::class,
+        // OurHouse\Providers\BroadcastServiceProvider::class,
+        OurHouse\Providers\EventServiceProvider::class,
+        OurHouse\Providers\RouteServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
 
     ],
 
